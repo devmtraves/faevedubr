@@ -1,0 +1,148 @@
+h1 {
+    padding-top: 5px;
+
+}
+
+body {
+
+    background-image: url('consultabanner1.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*Espaçamento do topo do conatiner
+.container {
+
+    padding-top: 50px;
+}*/
+
+header {
+
+    background-color: rgb(158, 238, 134);
+}
+
+header h1 {
+
+    font-family:courier,arial,helvetica;
+    color: rgb(4, 4, 4);
+}
+
+/*Configuração e posição da imagem*/
+img {
+    max-width: 450px;
+    max-height: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+button {
+
+    border: solid 5px;
+    background-color: rgb(238, 242, 245);
+    color: white;
+    font-family: Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+}
+
+.login {
+   display: flex;
+    justify-content: center;  /* Alinha horizontalmente */
+    align-items: center;      /* Alinha verticalmente */
+    height: 100vh;
+
+
+}
+
+.login input {
+  display: block;
+  margin: 10px auto;
+  width: 350px;
+  padding: 14px 16px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  box-sizing: border-box;
+}
+
+.login input:focus {
+  outline: none;
+  border-color: #101111; /* azul suave */
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+}
+
+
+/*AQUI É FEITO O ALINHAMENTO DO BOTÃO*/
+.login button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    color: floralwhite;
+    width: 360px;
+    padding-top: 5px;
+}
+
+/*Configuração e formatação do menu*/
+.menu a {
+    text-decoration:solid;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    text-transform: capitalize;
+}
+
+.menu a:hover {
+    color: rgb(27, 215, 240);
+    font-size: small;
+}
+
+.menu li
+ {
+    text-decoration: none;
+    list-style-type: none;
+    display:flexbox;
+    padding: 1px 5px;
+   
+}
+.menu{
+    margin:auto;
+    font-family:sans-serif;
+    font-size: 12px;
+    
+}
+.menu ul {
+    margin-left: -0px;
+    
+}
+
+.topomenu {
+   isplay: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ocupa a altura total da tela */
+    color: rgb(29, 27, 27);
+}
+
+
+.form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 50%;
+    padding-top: 0px;
+}
+
+.test {
+    background-color: rgba(10, 66, 3, 0.493);
+    color: white;
+    text-transform: capitalize;
+    height: 25px;
+
+    padding: 0rem;
+
+}
+
+
