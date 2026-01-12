@@ -1,5 +1,6 @@
 <?php
 //require 'adm/funcsistema.php';
+// Aqui foi removida a query da função do sistema global 
 require 'adm/consultas.php';
 
 $dadosAluno = $_GET['termo'];
