@@ -1,5 +1,6 @@
 <?php
-require 'adm/funcsistema.php';
+//require 'adm/funcsistema.php';
+require 'adm/consultas.php';
 
 $dadosAluno = $_GET['termo'];
 $ListarRegistros = consultaRegistro($conexao, $dadosAluno);
