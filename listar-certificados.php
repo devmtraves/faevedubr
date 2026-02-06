@@ -20,6 +20,7 @@ if (empty($_SESSION['id'])) {
                     <th scope="col">Nome Completo</th>
                     <th scope="col">CPF</th>
                     <th scope="col">Curso</th>
+                    <th scope="col">Livro</th>
                     <th scope="col">C H</th>
                     <th scope="col">Abrir</th>
                     <th scope="col">Atualizar</th>
@@ -35,6 +36,7 @@ if (empty($_SESSION['id'])) {
                     <td><?= htmlspecialchars($certificados['nome']); ?></td>
                     <td><?= htmlspecialchars($certificados['doc']); ?></td>
                     <td><?= htmlspecialchars($certificados['curso']); ?></td>
+                    <td><?= htmlspecialchars($certificados['livro']); ?></td>
                     <td class="text-center"><?= htmlspecialchars($certificados['ch']); ?></td>
                     <td class="text-center">
                         <a href="consultar-certificadoadm.php?id=<?= $certificados['id']; ?>" target="_blank"

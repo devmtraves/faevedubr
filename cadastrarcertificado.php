@@ -74,18 +74,26 @@ if (empty($_SESSION['id'])) {
                         <option value="Extensão">Extensão</option>
                     </select>
                 </div>
-
-                <!-- Campo CURSO (inicialmente escondido) -->
+                <!--Modificado para receber a informação digitada-->
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">Curso</label>
+                    <input class="form-control" type="text" id="curso" name="curso" placeholder="Pedagogia" required>
+                </div>
+                <!-- Campo CURSO (inicialmente escondido)
                 <div class="col-md-6" id="grupoCurso" style="display:none;">
                     <label class="form-label fw-bold">Curso</label>
                     <select class="form-control" id="curso" name="curso" required></select>
-                </div>
+                </div> -->
 
-                <!-- Campo C/H (inicialmente escondido) -->
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">CH</label>
+                    <input class="form-control" type="text" id="carga" name="ch" placeholder="450" required>
+                </div>
+                <!-- Campo C/H (inicialmente escondido) 
                 <div class="col-md-6" id="grupoCarga" style="display:none;">
                     <label class="form-label fw-bold">C/H</label>
                     <select class="form-control" id="carga" name="ch" required></select>
-                </div>
+                </div>-->
 
 
                 <div class="col-md-6">
@@ -103,6 +111,12 @@ if (empty($_SESSION['id'])) {
                     <label class="form-label fw-bold">Data de Emissão</label>
                     <input class="form-control date" type="text" name="DataDeEmissao" placeholder="dd/mm/aaaa" required>
                 </div>
+
+                <div class="col-md-3">
+                    <label class="form-label fw-bold">Livro</label>
+                    <input class="form-control date" type="text" id="livro" name="Livro" placeholder="01" required>
+                </div>
+
                 <div class="col-12 d-flex gap-2">
                     <button class="btn btn-outline-success" type="submit">
                         Salvar

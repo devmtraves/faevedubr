@@ -250,7 +250,7 @@ function listarDiplomas($conexao)
 function ListarCertificado($conexao)
 {
 
-    $sql = 'SELECT nome,doc,curso,id,ch FROM  certificados  ORDER BY id ';
+    $sql = 'SELECT nome,doc,curso,id,ch,livro FROM  certificados  ORDER BY id ';
 
     $resulCertificados = mysqli_query($conexao, $sql);
     //var_dump($resulCertificados);
