@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificados - FAEV</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 150px;
+        }
+        .header h1 {
+            color: #006400;
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .message {
+            background-color: #e8f5e9;
+            color: #388e3c;
+            border: 1px solid #388e3c;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-size: 14px;
+            color: #333;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #388e3c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #2c6e2f;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img src="https://faev.edu.br/wp-content/uploads/2020/06/Logo-FAEP.png" alt="Logo FAEV">
+            <h1>Consulta de Diplomas - FAEV</h1>
+        </div>
+
+        <div class="message">
+            <p>Informe o CPF para visualizar os certificados relacionados.</p>
+        </div>
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" placeholder="Digite o CPF" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Consultar</button>
+            </div>
+        </form>
+
+        <div class="message">
+            <p>Atenção! Essa ferramenta está passando por atualização do banco de dados. Caso a consulta não retorne com as informações que precisa, por favor, contate-nos para que façamos os devidos ajustes: <a href="mailto:consultas@faev.edu.br">consultas@faev.edu.br</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
