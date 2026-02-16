@@ -5,6 +5,7 @@ require 'adm/funcsistema.php';
 require 'topoadm.php';
 
 if (empty($_SESSION['id'])) {
+    
     header('location:index.php');
 }
 ?>
@@ -39,13 +40,13 @@ if (empty($_SESSION['id'])) {
                     <td><?= htmlspecialchars($certificados['livro']); ?></td>
                     <td class="text-center"><?= htmlspecialchars($certificados['ch']); ?></td>
                     <td class="text-center">
-                        <a href="consultar-certificadoadm.php?id=<?= $certificados['id']; ?>" target="_blank"
+                        <a href="consultar-certificadoadm.php?id=<?= $certificados['Registro']; ?>" target="_blank"
                             class="btn btn-primary">
                             <i class="bi bi-search"></i> visualizar
                         </a>
                     </td>
                     <td class="text-center">
-                        <a href="adm/atualizar-certificado.php?id=<?= $certificados['id']; ?>" target="_blank"
+                        <a href="adm/atualizar-certificado.php?Registro=<?= $certificados['Registro']; ?>" target="_blank"
                             class="btn btn-primary">
                             <i class="bi bi-search"></i> Atualizar
                         </a>

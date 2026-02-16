@@ -192,13 +192,14 @@ function consultaRegistro($conexao, $id_diploma)
 //Function consultar certificados
 function consultarCertificados($conexao, $id)
 {
-
+//var_dump($conexao,$id);
     //date_format(dataregistroDiploma,'%d/%m/%Y') dataregistroDiploma Formatação da data no mysql
 
     // Removido o limite para garantir que todos os registros sejam considerados
 
-    $sqlCertificados = "SELECT * FROM  certificados where id='$id' ";  // Alterado para buscar pelo ID
+    $sqlCertificados = "SELECT * FROM  certificados where Registro='$id' ";  // Alterado para buscar pelo ID
     $resulCertficados = mysqli_query($conexao, $sqlCertificados);
+    
 
     //Aqui foi criado um array  que vou usar para guardas os dados da query
     $certificados = array();
@@ -250,7 +251,7 @@ function listarDiplomas($conexao)
 function ListarCertificado($conexao)
 {
 
-    $sql = 'SELECT nome,doc,curso,id,ch,livro FROM  certificados  ORDER BY id ';
+    $sql = 'SELECT nome,doc,curso,id,ch,livro,Registro FROM  certificados  ORDER BY id ';
 
     $resulCertificados = mysqli_query($conexao, $sql);
     //var_dump($resulCertificados);

@@ -114,7 +114,7 @@ if (empty($_SESSION['id'])) {
 
                 <div class="col-md-3">
                     <label class="form-label fw-bold">Livro</label>
-                    <input class="form-control date" type="text" id="livro" name="Livro" placeholder="01" required>
+                    <input class="form-control date" type="number" id="livro" name="livro" placeholder="01" required>
                 </div>
 
                 <div class="col-12 d-flex gap-2">

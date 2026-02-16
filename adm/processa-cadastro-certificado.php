@@ -10,6 +10,7 @@ $curso                   = $_POST['curso'];                // Nome do curso
 $tipoCurso               = $_POST['TipoCurso'];           // Tipo do curso
 $ch                      = $_POST['ch'];                 // Carga horária
 $livro                   = $_POST['livro'];              // número de registro livro
+var_dump('Logo do Livro:',$livro);
 
 
  // Converte datas do formato dd/mm/yyyy para yyyy-mm-dd
