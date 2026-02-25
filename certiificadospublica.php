@@ -1,12 +1,7 @@
 <?php
-//session_start();
-//require 'adm/conexao.php';
-//require 'adm/funcsistema.php';
 require 'topoadm.php';
-//
-//if (empty($_SESSION['id'])) {
-//    
-//    header('location:index.php');
+
+//header('location:index.php');
 //}
 require 'adm/consultas.php';
 $dadosAluno = $_GET['termo'];
@@ -62,11 +57,7 @@ $ListarRegistros = consultaCertificados($conexao, $dadosAluno);
         </table>
     </div>
 
-    <div class="d-flex justify-content-end mt-4">
-        <a href="paineladm.php" class="btn btn-outline-secondary">
-            <i class="fa-solid fa-arrow-left"></i> Voltar
-        </a>
-    </div>
+    
 
 </div>
 
