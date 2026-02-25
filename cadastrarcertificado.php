@@ -70,7 +70,7 @@ if (empty($_SESSION['id'])) {
                         <option value="" disabled selected>Selecione o tipo</option>
                         <!--<option value="graduacao">Graduação</option>-->
                         <option value="Pós Graduação">Pós-Graduação</option>
-                        <option value="Pós FMG">Pós FMG</option>
+                        <!--<option value="Pós FMG">Pós FMG</option>-->
                         <option value="Extensão">Extensão</option>
                     </select>
                 </div>
