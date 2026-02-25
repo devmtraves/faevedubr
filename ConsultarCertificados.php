@@ -90,12 +90,12 @@
 <div class="container">
     <h1>Consulta de Certificados</h1>
     <p>Informe o CPF que deseja consultar</p>    
-    <form method="GET" action="diplomaregistrado.php">
+    <form method="GET" action="certiificadospublica.php">
         <input type="text" class="form-control" id="dados" name="termo" placeholder="000.000.000-00" required>
         <button type="submit" class="btn-primary">Consultar</button>
     </form>
     <p class="message-info">
-        ⚠️ Atenção: Esta ferramenta está em atualização. Se a consulta não retornar os dados, contate: <a href="mailto:diplomas@faev.edu.br">diplomas@faev.edu.br</a>
+        ⚠️ Atenção: Esta ferramenta está em atualização. Se a consulta não retornar os dados, contate: <a href="mailto:diplomas@faev.edu.br">diplomas@faculdademogina.edu.br</a>
     </p>
 </div>
 
