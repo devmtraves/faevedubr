@@ -6,6 +6,7 @@ require 'conexao.php';
 {
   $docaluno = $_POST['doc'];
   $nome     = $_POST['Nome'];
+  var_dump($nome);
   $curso    = $_POST['Curso'];
   
   $ch        = $_POST['Ch'];
@@ -48,7 +49,4 @@ require 'conexao.php';
 }
 
 $stmt->close();
-$conexao->close();
-
-
-?>
+$conexao->close(); 

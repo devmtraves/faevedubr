@@ -98,7 +98,7 @@ if ($ListarRegistros == null) {
     <div class="form">
         <form class="row g-3" action="update_certificado.php" method="POST">
             <div class="container">
-                <h2>Atualização das informações do certificado </h2>
+                <h1>Atualização das informações do certificado </h1>
                 <!-- Aluno -->
                 <div class="card-section">
                     <h4><i class="fa-solid fa-user"></i> Informações do Aluno</h4>

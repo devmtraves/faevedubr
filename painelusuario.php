@@ -180,9 +180,8 @@ if(empty($_SESSION['id'])){
     <div class="menuAdm">
         <ul>
             <li><a href="cadastrardiplomasecretaria.php" target="_self">Cadastrar Diploma</a></li>
-            <!-- <li><a href="cadastrarcertificado.php" target="_self">Cadastro de Certificados</a></li>
-            <li><a href="listar-certificados.php" target="_self">Consultar Certificados</a></li>-->
-            <!--  -->
+            <li><a href="cadastrarcertificado.php" target="_self">Cadastro de Certificados</a></li>
+            <li><a href="listar-certificados.php" target="_self">Consultar Certificados</a></li>
             <li><a href="listardiplomas.php" target="_self">Consultar Diploma</a></li>
             <li><a href="diplomas-cadastrados.php" target="_self">Atualizar Diploma</a></li>
 

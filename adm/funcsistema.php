@@ -272,6 +272,17 @@ function updatCertificado(
     $dataEmissao, $datadeInicio, $datadeConclusao,
     $ch, $tipoCurso, $id
 ){
+    var_dump('Dados recebidos para atualização: insert ' . json_encode([
+        'docaluno' => $docaluno,
+        'nome' => $nome,
+        'curso' => $curso,
+        'dataEmissao' => $dataEmissao,
+        'datadeInicio' => $datadeInicio,
+        'datadeConclusao' => $datadeConclusao,
+        'ch' => $ch,
+        'tipoCurso' => $tipoCurso,
+        'Registro' => $id
+    ]));
     $sql = "
         UPDATE certificados SET
             doc = ?,
@@ -282,11 +293,11 @@ function updatCertificado(
             DataDeConclusao = ?,
             ch = ?,
             tipoCurso = ?
-        WHERE id = ?
+        WHERE Registro = ?
     ";
-
+     // var_dump('Debuga $sql: ' . $sql);
     $stmt = mysqli_prepare($conexao, $sql);
-    
+  
     if (!$stmt) {
         die('Erro ao preparar: ' . mysqli_error($conexao));
     }
