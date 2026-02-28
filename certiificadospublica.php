@@ -1,5 +1,5 @@
 <?php
-require 'topoadm.php';
+require 'pesquisacertificadospublica.php';
 
 //header('location:index.php');
 //}
@@ -23,7 +23,7 @@ $ListarRegistros = consultaCertificados($conexao, $dadosAluno);
                     <th scope="col">Livro</th>
                     <th scope="col">C H</th>
                     <th scope="col">Abrir</th>
-                    <th scope="col">Atualizar</th>
+                    <!--<th scope="col">Atualizar</th>-->
                 </tr>
             </thead>
             <tbody>
@@ -42,15 +42,15 @@ $ListarRegistros = consultaCertificados($conexao, $dadosAluno);
                     <td class="text-center">
                         <a href="consultar-certificadoadm.php?id=<?= $certificados['Registro']; ?>" target="_blank"
                             class="btn btn-primary">
-                            <i class="bi bi-search"></i> visualizar
+                            <i class="bi bi-search"></i> Abrir
                         </a>
                     </td>
-                    <td class="text-center">
+                    <!--<td class="text-center">
                         <a href="adm/atualizar-certificado.php?Registro=<?= $certificados['Registro']; ?>" target="_blank"
                             class="btn btn-primary">
                             <i class="bi bi-search"></i> Atualizar
                         </a>
-                    </td>
+                    </td>-->
                 </tr>
                 <?php endforeach; ?>
             </tbody>
