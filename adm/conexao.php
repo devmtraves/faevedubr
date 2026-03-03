@@ -1,15 +1,15 @@
 <?php
 
 
-// $servidor="acadfaev.mysql.dbaas.com.br";
-// $usuario="acadfaev";
-// $senha="Acad@faev2025";
-// $banco="acadfaev";
+ $servidor="acadfaev.mysql.dbaas.com.br";
+ $usuario="acadfaev";
+ $senha="Acad@faev2025";
+ $banco="acadfaev";
 
-$servidor="localhost";
-$usuario="root";
-$senha="";
-$banco="faev";
+//$servidor="localhost";
+//$usuario="root";
+//$senha="";
+//$banco="faev";
 
 //Conectando com o servidor
 $conexao = mysqli_connect($servidor , $usuario , $senha , $banco);

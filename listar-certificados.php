@@ -58,7 +58,7 @@ if (empty($_SESSION['id'])) {
     </div>
 
     <div class="d-flex justify-content-end mt-4">
-        <a href="paineladm.php" class="btn btn-outline-secondary">
+        <a href="painelusuario.php" class="btn btn-outline-secondary">
             <i class="fa-solid fa-arrow-left"></i> Voltar
         </a>
     </div>
