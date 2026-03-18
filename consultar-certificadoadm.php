@@ -4,26 +4,24 @@
 require 'adm/funcsistema.php';
 
 
-//Recebendo o registro para pesquisar Cpf do Aluno
+/*Recebendo o registro para pesquisar Cpf do Aluno*/
 
-$doc_Aluno = $_GET['id'];
+                $doc_Aluno = $_GET['id'];
 
-?>
+ ?>
 
 <?php
 
 $ListarRegistros = consultarCertificados($conexao, $doc_Aluno);
 
-//var_dump($ListarRegistros);
-
-if ($ListarRegistros == null) {
+    if ($ListarRegistros == null) {
 
     echo "<div class='alert alert-warning' role='alert'>
     Registro Não Localizado!
   </div>";
 
     die;
-}
+    }
 
 ?>
 
@@ -107,11 +105,11 @@ if ($ListarRegistros == null) {
     <div class="card-section">
         <h4><i class="fa-solid fa-graduation-cap"></i> Informações do Curso</h4>
         <div class="row g-3">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <label class="form-label fw-bold">Tipo do Curso</label>
                 <input type="text" class="form-control" name="TipoCurso" value="<?php echo $ListarRegistros[0]['TipoCurso']; ?>" readonly>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <label class="form-label fw-bold">Curso</label>
                 <input type="text" class="form-control" name="Curso" value="<?php echo $ListarRegistros[0]['Curso']; ?>" readonly>
             </div>
@@ -119,8 +117,6 @@ if ($ListarRegistros == null) {
                 <label class="form-label fw-bold">Carga Horária</label>
                 <input type="text" class="form-control" name="Ch" value="<?php echo $ListarRegistros[0]['Ch']; ?>" readonly>
         </div>
-           
-          
         </div>
     </div>
 
@@ -128,27 +124,36 @@ if ($ListarRegistros == null) {
     <div class="card-section">
         <h4><i class="fa-solid fa-file-lines"></i> Informações do Certificado</h4>
         <div class="row g-3">
-            <div class="col-md-4">
-                <label class="form-label fw-bold">Data de Emissão</label>
-                <input type="text" class="form-control" name="DataDeEmissao" value="<?php echo !empty($ListarRegistros[0]['DataDeEmissao']) ? date('d/m/Y', strtotime($ListarRegistros[0]['DataDeEmissao'])) : ''; ?>" readonly>
-            </div>
-              <div class="col-md-4">
+             <div class="col-md-2">
                 <label class="form-label fw-bold">Data de Inicio</label>
                 <input type="text" class="form-control" name="DataDeInicio" value="<?php echo !empty($ListarRegistros[0]['DataDeInicio']) ? date('d/m/Y', strtotime($ListarRegistros[0]['DataDeInicio'])) : ''; ?>" readonly>
             </div>
-            <div class="col-md-4">
-                <label class="form-label fw-bold">Data de Conclusão</label>
+            <div class="col-md-2">
+                <label class="form-label fw-bold">Data de Término</label>
                 <input type="text" class="form-control" name="DataDeConclusao" value="<?php echo !empty($ListarRegistros[0]['DataDeConclusao']) ? date('d/m/Y', strtotime($ListarRegistros[0]['DataDeConclusao'])) : ''; ?>" readonly>
             </div>
-            
-            <!--<div class="col-md-4">
-                <label class="form-label fw-bold">Nº de Registro</label>
-                <input type="text" class="form-control" name="numeroProcessoDiploma" value="<?php echo $ListarRegistros[0]['numeroProcesso']; ?>" readonly>
-            </div>-->
-            
-            
+           
+               <div class="col-md-2">
+                <label class="form-label fw-bold">Livro</label>
+                <input type="text" class="form-control" name="Livro" value="<?php echo $ListarRegistros[0]['Livro']; ?>" readonly>
+             
     </div>
-        </div>
+            <div class="col-md-2">
+                <label class="form-label fw-bold">Folha</label>
+                <input type="text" class="form-control" name="Folha" value="<?php echo $ListarRegistros[0]['Folha']; ?>" readonly>
+            </div>
+        
+          
+            <div class="col-md-2">
+                <label class="form-label fw-bold">Número de Registro</label>
+                <input type="text" class="form-control" name="registro" value="<?php echo $ListarRegistros[0]['Registro']; ?>" readonly>
+            </div>
+ <div class="col-md-2">
+                <label class="form-label fw-bold">Data de Registro</label>
+                <input type="text" class="form-control" name="DataDeEmissao" value="<?php echo !empty($ListarRegistros[0]['DataDeEmissao']) ? date('d/m/Y', strtotime($ListarRegistros[0]['DataDeEmissao'])) : ''; ?>" readonly>
+            </div>
+            
+         
                 <!--LIBERAR NA VERSÂO DO SISTEMA DEPOIS DA TELA ADMIN    
                 <a href="adm/editar-diploma.php?id=<?= $ListarRegistros[0]['doc']; ?>" class="btn btn-outline-primary"
                     role="button" aria-pressed="true">Editar</a>

@@ -22,7 +22,7 @@ function cadUsuario($conexao, $cpf, $nome, $email, $departamento, $stausUsuario,
 function logarUsuario($conexao, $login, $senha)
 {
     // SELECT DO LOGIN E SENHA DO USUÁRIO
-    $queryLogin = "SELECT * FROM usuario WHERE email ='$login' AND senha = '$senha' LIMIT 1";
+    $queryLogin = "SELECT email, nome, perfil, ativo FROM usuario WHERE email ='$login' AND senha = '$senha' LIMIT 1";
 
     $resultadoLogin = mysqli_query($conexao, $queryLogin);
 
@@ -39,14 +39,17 @@ function logarUsuario($conexao, $login, $senha)
         $_SESSION['nomeuser'] = $dados[0]['nome'];
 
         $perfilUsuario = $dados[0]['perfil'];
+        //var_dump('Debug perfilUsuario: ' . $perfilUsuario);
 
         $login = $dados[0]['email'];
+        
 
         $updateLogin = atualizaLogin($conexao, $login);
 
         // return $updateLogin;
 
         if ($perfilUsuario == 1) {
+            echo 'Debug login: ' . $login;
             header('location:paineladm.php');
         } else {
 

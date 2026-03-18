@@ -9,8 +9,10 @@ var_dump($nomecompleto);
 $curso                   = $_POST['curso'];                // Nome do curso
 $tipoCurso               = $_POST['TipoCurso'];           // Tipo do curso
 $ch                      = $_POST['ch'];                 // Carga horária
-$livro                   = $_POST['livro'];              // número de registro livro
-var_dump('Logo do Livro:',$livro);
+$livro                   = $_POST['livro'];
+$folha                   = $_POST['folha'];  
+$registro                = $_POST['registro'];            // número de registro folha
+var_dump('Logo da Folha:', $folha);
 
 
  // Converte datas do formato dd/mm/yyyy para yyyy-mm-dd
@@ -29,14 +31,14 @@ $dataDeEmissao           = formatarData($_POST['DataDeEmissao']);        // Data
 
 // Preparando o INSERT
 $sql = "INSERT INTO certificados (
-            doc, nome, curso, DataDeInicio, DataDeConclusao, DataDeEmissao, Ch, TipoCurso,Livro
-        ) VALUES (?,?,?,?,?,?,?,?,?)";
+            doc, nome, curso, DataDeInicio, DataDeConclusao, DataDeEmissao, Ch, TipoCurso,Livro,Folha, Registro
+        ) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
 
 // Usando prepared statement
 $stmt = $conexao->prepare($sql);
 
 $stmt->bind_param(
-    "sssssssss",
+    "sssssssssss",
     $docaluno,
     $nomecompleto,
     $curso,
@@ -45,7 +47,9 @@ $stmt->bind_param(
     $dataDeEmissao,
     $ch,
     $tipoCurso,
-    $livro
+    $livro,
+    $folha,
+    $registro
 );
 
 

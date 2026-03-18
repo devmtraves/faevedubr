@@ -45,12 +45,7 @@ $ListarRegistros = consultaCertificados($conexao, $dadosAluno);
                             <i class="bi bi-search"></i> Abrir
                         </a>
                     </td>
-                    <!--<td class="text-center">
-                        <a href="adm/atualizar-certificado.php?Registro=<?= $certificados['Registro']; ?>" target="_blank"
-                            class="btn btn-primary">
-                            <i class="bi bi-search"></i> Atualizar
-                        </a>
-                    </td>-->
+                    
                 </tr>
                 <?php endforeach; ?>
             </tbody>

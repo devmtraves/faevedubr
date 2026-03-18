@@ -95,7 +95,7 @@
         <button type="submit" class="btn-primary">Consultar</button>
     </form>
     <p class="message-info">
-        ⚠️ Atenção: Esta ferramenta está em atualização. Se a consulta não retornar os dados, contate: <a href="mailto:diplomas@faev.edu.br">diplomas@faculdademogina.edu.br</a>
+        ⚠️ Atenção: Esta ferramenta está em atualização. Se a consulta não retornar os dados, contate: <a href="mailto:diplomas@faculdademogiana.edu.br">cerficados@faculdademogiana.edu.br</a><br/><a href="mailto:diplomas@faev.edu.br">certificados@faev.edu.br</a>
     </p>
 </div>
 

@@ -1,14 +1,12 @@
 <?php
 session_start();
 //require 'topoadm.php';
-
 if (empty($_SESSION['id'])) {
   header('location:index.php');
 }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +21,6 @@ if (empty($_SESSION['id'])) {
         align-items: center;
         justify-content: center;
     }
-
     .form-wrapper {
         background: #fff;
         padding: 2rem;
@@ -54,7 +51,6 @@ if (empty($_SESSION['id'])) {
             <h2>Cadastro de Certificado</h2>
 
             <form class="row g-3" action="adm/processa-cadastro-certificado.php" method="POST">
-
                 <div class="col-md-6">
                     <label class="form-label fw-bold">Nome Completo</label>
                     <input class="form-control" type="text" name="nomedoaluno" placeholder="João da Silva" required>
@@ -63,7 +59,6 @@ if (empty($_SESSION['id'])) {
                     <label class="form-label fw-bold">CPF</label>
                     <input class="form-control" type="text" id="cpf" name="doc" placeholder="000.000.000-00" required>
                 </div>
-
                 <div class="col-md-6">
                     <label class="form-label fw-bold">Tipo de Curso</label>
                     <select class="form-control" id="tipoCurso" name="TipoCurso" required onchange="filtrarCursos()">
@@ -79,42 +74,39 @@ if (empty($_SESSION['id'])) {
                     <label class="form-label fw-bold">Curso</label>
                     <input class="form-control" type="text" id="curso" name="curso" placeholder="Pedagogia" required>
                 </div>
-                <!-- Campo CURSO (inicialmente escondido)
-                <div class="col-md-6" id="grupoCurso" style="display:none;">
-                    <label class="form-label fw-bold">Curso</label>
-                    <select class="form-control" id="curso" name="curso" required></select>
-                </div> -->
-
+                
                 <div class="col-md-6">
                     <label class="form-label fw-bold">CH</label>
                     <input class="form-control" type="text" id="carga" name="ch" placeholder="450" required>
                 </div>
-                <!-- Campo C/H (inicialmente escondido) 
-                <div class="col-md-6" id="grupoCarga" style="display:none;">
-                    <label class="form-label fw-bold">C/H</label>
-                    <select class="form-control" id="carga" name="ch" required></select>
-                </div>-->
 
-
-                <div class="col-md-6">
+                <div class="col-md-3">
                     <label class="form-label fw-bold">Data de Inicio</label>
                     <input class="form-control date" type="text" name="DataDeInicio" placeholder="dd/mm/aaaa" required>
                 </div>
-
-                <div class="col-md-6">
-                    <label class="form-label fw-bold">Data de Conclusão</label>
+                <div class="col-md-3">
+                    <label class="form-label fw-bold">Data de Término</label>
                     <input class="form-control date" type="text" name="DataDeConclusao" placeholder="dd/mm/aaaa"
                         required>
                 </div>
 
+                
                 <div class="col-md-3">
-                    <label class="form-label fw-bold">Data de Emissão</label>
-                    <input class="form-control date" type="text" name="DataDeEmissao" placeholder="dd/mm/aaaa" required>
-                </div>
-
-                <div class="col-md-3">
-                    <label class="form-label fw-bold">Livro</label>
+                    <label class="form-label fw-bold">Livro </label>
                     <input class="form-control date" type="number" id="livro" name="livro" placeholder="01" required>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label fw-bold">Folha</label>
+                    <input class="form-control date" type="number" id="folha" name="folha" placeholder="01" required>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label fw-bold">Número de Registro</label>
+                    <input class="form-control date" type="number" id="registro" name="registro" placeholder="01" required>
+                </div>
+                
+                <div class="col-md-3">
+                    <label class="form-label fw-bold">Data de Registro</label>
+                    <input class="form-control date" type="text" name="DataDeEmissao" placeholder="dd/mm/aaaa" required>
                 </div>
 
                 <div class="col-12 d-flex gap-2">
@@ -122,7 +114,7 @@ if (empty($_SESSION['id'])) {
                         Salvar
                     </button>
 
-                    <a href="paineladm.php" class="btn btn-outline-danger">
+                    <a href="painelusuario.php" class="btn btn-outline-danger">
                         <i class="fa-solid fa-arrow-left"></i> Cancelar
                     </a>
                 </div>
